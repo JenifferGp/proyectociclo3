@@ -2,6 +2,7 @@
 # Proyecto de Monitoreo de Medios
 # Contamos con una tabla inicial de medios online de Argentina
 # Apartir de alli, vamos a extraer las publicaciones de estos medios para formar una tabla de publicaciones
+# La tabla de publicaciones debe actualizarce periodicamente, y traer las publicaciones nuevas del medio
 # Esta tabla de publicaciones tiene que ser visualizada tanto por los clientes, como por el administrador
 # Exite una tabla de usuarios, donde se identifica su rol, sea admin o cliente, asi como sus credenciales de acceso
 # Otra tabla relaciona los usuarios con las marcas y asi mismo una tabla de marcas con palabras claves para identificar en las publicaciones 
