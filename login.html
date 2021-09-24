@@ -3,16 +3,23 @@
         <meta charset="utf-8">
         <title>Formulario Login</title>
         <link rel="stylesheet" href="resources/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
-    <body>
+    <body style="background: linear-gradient(
+        0deg,
+       rgba(0,0,36,1) 6%,
+       rgba(0,82,164,1) 45%,
+       rgba(9,121,105,1) 100%
+       );">
        <section class="formulario-login">
            <h5>Formulario Login</h5>
            <img class="logo" src="resources/imagenes/logo.jpg" />
            <br />
-           <input class="input-login" type="text" name="usuario" value="" placeholder="Usuario" />
-           <input class="input-login" type="password" name="contrasena" value="" placeholder="Contraseña" />
-           <input class="boton" type="submit" name="" value="Ingresar" />
+           <input id="txtUsuario" class="input-login" type="text" name="txtUsuario" value="" placeholder="Usuario" />
+           <input id="txtContrasena" class="input-login" type="password" name="txtContrasena" value="" placeholder="Contraseña" />
+           <input id="btnIngresar" class="boton" type="button" name="" value="Ingresar" style="cursor: pointer;"/>
            <p><a href="#">¿Olvidaste tu Contraseña?</a></p>
        </section> 
+       <script type="text/javascript" src="resources/js/login.js"></script>
     </body>
 </html>
