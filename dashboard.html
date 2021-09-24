@@ -1,0 +1,281 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Collapsible sidebar using Bootstrap 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-light bg-light" style="background: #FFF !important;">
+            <a class="navbar-brand" href="#" style="color: rgba(0,82,164,1); font-weight: bold;">
+                <img src="/resources/imagenes/logo.jpg" width="60" height="auto" alt="">
+            </a>
+            <span id="spanBienvenido" class="navbar-text"
+                style="font-weight: bold;color: rgba(0,82,164,1); padding-top: 9px;">
+                Bienvenido
+            </span>
+        </nav>
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+            <div class="position-sticky">
+                <div class="list-group list-group-flush mx-3 mt-4">
+                    <a class="list-group-item list-group-item-action py-2 ripple active" aria-current="true"
+                        data-mdb-toggle="collapse" href="dashboard.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="publicaciones.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Publicaciones</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="admin.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Administrar marcas</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="login.html" aria-expanded="true">
+                        <i class="fas fa-chart-area fa-fw me-3"></i><span>Salir</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section style="margin-left: 240px;">
+
+        <div class="row" style="padding: 18px 36px;">
+            <div class="col-md-4 dashboard-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Publicaciones esta semana</h5>
+                        <canvas id="myPolarChart" style="max-height: 360px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 dashboard-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Consumo per capita</h5>
+                        <canvas id="myDoughnutChart" style="max-height: 360px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 dashboard-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mas buscados</h5>
+                        <canvas id="myRadarChart" style="max-height: 360px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 dashboard-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mas comprados</h5>
+                        <canvas id="myBarChart" style="max-width: 720px;max-height: 360px;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 dashboard-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Credibilidad</h5>
+                        <canvas id="myLineChart" style="max-width: 720px;max-height: 360px;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+        integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script type="text/javascript">
+        var ctxBar = document.getElementById("myBarChart").getContext('2d');
+        var myBarChart = new Chart(ctxBar, {
+            type: 'bar',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        var ctxLine = document.getElementById("myLineChart").getContext('2d');
+        var myLineChart = new Chart(ctxLine, {
+            type: 'line',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        var ctxPolar = document.getElementById("myPolarChart").getContext('2d');
+        var myPolarChart = new Chart(ctxPolar, {
+            type: 'polarArea',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+        });
+        var ctxRadar = document.getElementById("myRadarChart").getContext('2d');
+        var myRadarChart = new Chart(ctxRadar, {
+            type: 'radar',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+        var ctxDoughnut = document.getElementById("myDoughnutChart").getContext('2d');
+        var myDoughnutChart = new Chart(ctxDoughnut, {
+            type: 'doughnut',
+            data: {
+                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                datasets: [{
+                    label: '# of Votes',
+                    data: [12, 19, 3, 5, 2, 3],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+    <script>
+        $(function () {
+            console.log('readyDashboard');
+            $("#spanBienvenido").text('Bienvenido, ' + sessionStorage.getItem('usuario'));
+        })
+    </script>
+</body>
+
+</html>
