@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Collapsible sidebar using Bootstrap 4</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-light bg-light" style="background: #FFF !important;">
+            <a class="navbar-brand" href="#" style="color: rgba(0,82,164,1); font-weight: bold;">
+                <img src="/resources/imagenes/logo.jpg" width="60" height="auto" alt="">
+            </a>
+            <span id="spanBienvenido" class="navbar-text" style="font-weight: bold;color: rgba(0,82,164,1); padding-top: 9px;">
+                Bienvenido
+              </span>
+        </nav>
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+            <div class="position-sticky">
+                <div class="list-group list-group-flush mx-3 mt-4">
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="dashboard.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple active" aria-current="true"
+                        data-mdb-toggle="collapse" href="publicaciones.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Publicaciones</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="admin.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Administrar marcas</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="login.html" aria-expanded="true">
+                        <i class="fas fa-chart-area fa-fw me-3"></i><span>Salir</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script>
+        $(function () {
+            console.log('readyDashboard');
+            $("#spanBienvenido").text('Bienvenido, ' + sessionStorage.getItem('usuario'));
+        })
+    </script>
+</body>
+
+</html>
