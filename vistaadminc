@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista Admin Cliente</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class=main-container>
+        <header>
+            <div class=menu>
+                <ul>
+                    <li class=logo>
+                        <img width="150px" src="/imagenes/Logo.png" alt="">
+                    </li>
+                    <li>Bienvenido</li>
+                    <main>
+                        <div class="text">
+
+                            <p>
+                                <button><a href="#features">Perfil</a></button>
+                            </p>
+                            <p>
+                                <button>Notificaciones</button>
+                            </p>
+                            <p>
+                                <button>Mis estadisticas</button>
+                            </p>
+                        </div>
+                        <div class="image">
+
+                        </div>
+                    </main>
+                </ul>
+            </div>
+
+        </header>
+
+        <div class="section" id=features>
+            <div class="layout layout-left">
+                <div class="text">
+                    <div class="image"></div>
+                    <img width="70px" src="/imagenes/Perfil.png" alt="">
+                    <p>Editar foto de perfil</p>
+                    <h3>Nombre</h3>
+                    <p>Correo electrónico</p>
+
+                </div>
+            </div>
+
+
+            <div class="section" id=contact>
+                <footer>
+                    Monitoreo de Medios.
+                </footer>
+                <footer>
+                    Contactenos
+                </footer>
+
+            </div>
+        </div>
+</body>
+
+</html>
