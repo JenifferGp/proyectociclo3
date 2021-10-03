@@ -122,3 +122,10 @@
     .dashboard-card {
       padding: 9px;
     }
+
+    .thead-custom tr th {
+      color: #FFF;
+      background-color: #0153a4;
+      border-color: #032346;
+      vertical-align: middle;
+    }

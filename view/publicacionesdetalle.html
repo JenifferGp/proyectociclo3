@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Monitoreo de medios | Publicacion Detalle</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/styles_login.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar fixed-top navbar-light bg-light" style="background: #FFF !important;">
+            <a class="navbar-brand" href="#" style="color: rgba(0,82,164,1); font-weight: bold;">
+                <img src="../assets/images/logo.png" width="60" height="auto" alt="">
+            </a>
+            <span id="spanBienvenido" class="navbar-text" style="font-weight: bold;color: rgba(0,82,164,1); padding-top: 9px;">
+                Bienvenido
+              </span>
+        </nav>
+        <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+            <div class="position-sticky">
+                <div class="list-group list-group-flush mx-3 mt-4">
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="dashboard.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Dashboard</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple active" aria-current="true"
+                        data-mdb-toggle="collapse" href="publicaciones.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Publicaciones</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="admin.html" aria-expanded="true">
+                        <i class="fas fa-tachometer-alt fa-fw me-3"></i><span>Administrar marcas</span>
+                    </a>
+                    <a class="list-group-item list-group-item-action py-2 ripple" aria-current="true"
+                        data-mdb-toggle="collapse" href="login.html" aria-expanded="true">
+                        <i class="fas fa-chart-area fa-fw me-3"></i><span>Salir</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    <div class="col-md-12" style="padding: 18px 18px 18px 258px;">
+        <div class="card" style="padding: 3%">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12" style="vertical-align: middle;">
+                    <h1 id="titulo">Titular noticia</h1>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12" style="text-align: end; vertical-align: middle; padding-top: 9px;">
+                    <h3 id="fuente">fuente.web</h3>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-12" style="vertical-align: middle; text-align: center;">
+                    <img src="https://estaticos.elperiodico.com/resources/jpg/9/4/1583880505249.jpg" />
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-12" style="text-align: start; vertical-align: middle; padding-top: 9px;">
+                    <h4 style="font-weight: bold;">Contenido</h4>
+                    <p style="text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <br />
+                    <h4 style="font-weight: bold;">Resumen</h4>
+                    <p style="text-align: justify;">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+                    <p style="text-align: justify;">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                    <p style="text-align: justify;">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            console.log('readyDashboard');
+            $("#spanBienvenido").text('Bienvenido, ' + sessionStorage.getItem('usuario'));
+            if(sessionStorage.getItem('titulo') != null && sessionStorage.getItem('titulo') != "") {
+                $("#titulo").text(sessionStorage.getItem('titulo'));
+            }
+            if(sessionStorage.getItem('fuente') != null && sessionStorage.getItem('fuente') != "") {
+                $("#fuente").text(sessionStorage.getItem('fuente'));
+            }
+        })
+    </script>
+</body>
+
+</html>
