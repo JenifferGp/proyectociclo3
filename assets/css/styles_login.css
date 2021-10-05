@@ -129,3 +129,32 @@
       border-color: #032346;
       vertical-align: middle;
     }
+
+    .publicacion{
+      position: -ms-page;
+      text-align: center;   
+    }
+
+    table{
+      width: 100%;
+      color: #0b0d0f;
+    }  
+    table, th, td {
+      border: 2px solid black;
+      border-collapse: collapse;
+      text-align: center;
+    }
+    .table th{
+      color: white;
+      font-size: 20px;
+      background-color:rgb(47, 139, 231) ;
+    }
+
+    .table td{
+      background-color: rgb(229, 229, 245);
+    }
+    .button{
+      color: #0153a4;
+      font-weight: bold;
+      size: 3px;
+    }
