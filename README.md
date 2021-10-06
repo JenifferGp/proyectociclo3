@@ -1,5 +1,6 @@
 # proyectociclo3
 # Proyecto de Monitoreo de Medios
+# Ingrese a la vista login.html, allí podra ingresar digitando cualquier usuario y clave. Luego podra ver la diferentes vistas del proyecto hechas hasta el momento.
 # Contamos con una tabla inicial de medios online de Argentina
 # Apartir de alli, vamos a extraer las publicaciones de estos medios para formar una tabla de publicaciones
 data_wp.py : -->Para la extraccion de estas publicaciones se utilizo un script en python para traer un maximo de 9990 publicaciones por medio, con el fin de contar con un historico, que para el resultado del ejercicio se cuenta con publicaiones desde enero de 1992. 137 medios. Se guardo la extraccion inical en archivos .csv por cada medio dispuestos en la carpeta 'publicaciones  por medios primera extraccion'.
