@@ -117,3 +117,43 @@ footer {
     font-size: 15px;
     width: 150%;
 }
+/* Formulario de contacto */
+body.contacto_view{
+    background-color: transparent;
+}
+#contact_form label{
+    font-size: 2vh;
+    margin-bottom: 0;
+}
+#contact_form input{
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    padding: 5px 5px;
+    font-size: 2vh;
+    border-radius: 15px;
+    border: none;
+}
+#contact_form textarea{
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    padding: 5px 5px;
+    font-size: 2vh;
+    height: 10vh;
+    border-radius: 15px;
+    border: none;
+}
+#contact_form input#button{
+    font-size: 13px;
+    color: white;
+    background: #1FC0D6;
+    padding: 8px 25px;
+    border-radius: 19px;
+    display: flex;
+    width: auto;
+    align-items: center;
+    float: right;
+    -webkit-text-stroke: 0.5px;
+    font-weight: bold;
+}

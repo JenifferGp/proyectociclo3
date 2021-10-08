@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <!-- HEAD -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+  integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="../assets/css/swiper.min.css">
+  <link rel="stylesheet" href="../assets/css/web.css">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="../assets/js/script.js" type="text/javascript" charset="utf-8" async defer></script>
+
+  <!-- HEAD -->
+  <style media="screen">
+    .modal_video {
+    position: fixed;
+    z-index: 99;
+    background: #fffffff5;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .body_modal {
+      text-align: center;
+      padding-top: 4vh;
+      width: 75%;
+      margin: 0 auto;
+      position: relative;
+  }
+    span.cerrar_vider {
+      background: #1692C4;
+      color: #ffff;
+      font-weight: bold;
+      font-size: 24px;
+      position: absolute;
+      right: -2vh;
+      border: solid #fff 1px;
+      border-radius: 55px;
+      padding: 1px 11px;
+      cursor: pointer;
+  }
+  .body_modal iframe {
+      width: 100%;
+      height: 90vh;
+  }
+  </style>
+  <body class='contacto_view'>
+  
+
+  <div class='web'>
+    <div class='contentweb'>
+      <div class='banerprincipal'>
+        <div class='col-md-5 col-xs-12'>
+          <div class='txt'>
+            <h1>¡MM </h1>
+            <h2>es manejar el tiempo!</h2>
+            <p>Con MM podrás tomar decisiones en menor tiempo gracias al acceso inmediato y centralizado de la gestión de tus relaciones públicas.</p>
+            <a class="btn_video" style="cursor: pointer;">
+              Ver video <i class="fa fa-angle-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class='col-md-7 col-xs-12'>
+          <img src="../assets/images/logo.png" alt="">
+        </div>
+        <div class="barlat">
+          <div class='cotentbar'>
+            <div class='barl'></div>
+            <nobr>•</nobr>
+            <div class='barr'></div>
+          </div>
+        </div>
+      </div>
+      <div class='sol-demo'>
+        <div class='col-md-3'>
+          <p><strong>Solicitar</strong> demo <i class="fa fa-angle-right" aria-hidden="true"></i></p>
+        </div>
+        <div class='col-md-9'>
+          <form id="contact_form" action="enviar.php" method="POST" enctype="multipart/form-data">
+            <div class="row">
+              <div class="col-6">
+                <label class="required" for="name">Nombre:</label>
+                <input id="name" class="name" name="name" type="text" value="" size="30" required="required" /><br />
+                <span id="name_validation" class="error_message"></span>
+              </div>
+              <div class="col-6">
+                <label class="required" for="email">Correo Electrónico</label>
+                <input id="email" class="input" name="email" type="email" value="" size="30" required="required"/><br />
+                <span id="email_validation" class="error_message"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <label class="required" for="phone">Número Celular</label>
+                <input id="phone" class="phone" name="phone" type="number" value="" size="30" required="required" /><br />
+                <span id="phone_validation" class="error_message"></span>
+              </div>
+              <div class="col-6">
+                <label class="required" for="url">Página Web</label>
+                <input id="url" class="input" name="url" type="url" value="https://" size="30" required="required" /><br />
+                <span id="url_validation" class="error_message"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <label class="required" for="message">Mensaje:</label>
+                <textarea id="message" class="input" name="message" rows="7" cols="30" required="required"></textarea><br />
+                <span id="message_validation" class="error_message"></span>
+              </div>
+            </div>
+              <input id="button" type="submit" value="Enviar" />
+           
+          </form>
+          
+        </div>
+
+        <!-- <input class='name' type="text" placeholder='Nombre*'>
+        <input class='mail' type="text" placeholder='E-mail*'>
+        <input class='send' type="submit" value='Empezar ahora'> -->
+        <div class="barlat">
+          <div class='cotentbar'>
+            <div class='barl'></div>
+            <img src="../assets/Icons/point1.png" alt="">
+            <div class='barr'></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class='clientes'>
+        <div class='row'>
+          <p>Clientes que ya son <strong>MM</strong></p>
+        </div>
+        <div class='slide'>
+          <div id='categoria1' class="conte_slide0">
+            <div class="swiper-container swiper-container-h">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+                <div class="swiper-slide"><img src="../assets/Icons/mark1.png" /></div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination-h"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next marcas-next"></div>
+              <div class="swiper-button-prev marcas-prev"></div>
+            </div>
+          </div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="barlat">
+          <div class='cotentbar'>
+            <div class='barl'></div>
+            <img src="../assets/Icons/point2.png" alt="">
+            <div class='barr'></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal_video" style="display:none">
+    <div class="body_modal">
+      <span class="cerrar_vider">X</span>
+      <iframe id="vimeo-player" src="https://www.youtube.com/embed/z68NLICaggw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+ 
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script src="../assets/js/froogaloop2.min.js"></script>
+  <script>
+  var swiper = new Swiper('.swiper-container-h', {
+    slidesPerView: 3,
+    spaceBetween: 0,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: '.swiper-pagination-h',
+        type: 'none',
+    },
+    navigation: {
+      nextEl: '.swiper-button-next.marcas-next',
+      prevEl: '.swiper-button-prev.marcas-prev',
+    },
+  });
+  var iframe = $('#vimeo-player')[0];
+  var player = $f(iframe);
+
+  $(".btn_video").click(function(){
+    $(".modal_video").fadeIn();
+    player.api('play');
+  });
+  $(".cerrar_vider").click(function(){
+    $(".modal_video").fadeOut();
+    player.api('pause');
+  });
+
+
+  </script>
+</html>

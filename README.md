@@ -1,5 +1,6 @@
 # proyectociclo3
 # Proyecto de Monitoreo de Medios
+# La vista de Home.html, contiene el formulario con validacion para solicitar un demo del aplicativo.
 # Ingrese a la vista login.html, allí podra ingresar digitando cualquier usuario y clave. Luego podra ver la diferentes vistas del proyecto hechas hasta el momento.
 # Contamos con una tabla inicial de medios online de Argentina
 # Apartir de alli, vamos a extraer las publicaciones de estos medios para formar una tabla de publicaciones
